@@ -1,0 +1,20 @@
+.page-title {
+    font-family: cursive;
+    color: #a5a22a;
+}
+.page-sous-title {
+    color: #222222;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.page-historique {
+    font-family: "Cardo";
+    font-weight: 400;
+    font-size: 20px;
+    color: #827f79;
+    padding-top: 40px;
+}
+.page-about-img {
+    width: 700px;
+    padding-bottom: 40px;
+}
