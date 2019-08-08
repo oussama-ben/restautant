@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=lg, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css" />
+    
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Livraison</title>
+<head>
+
+</head>
+<body>
+        <form class="needs-validation" novalidate>
+            <div class="container">   
+            <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
+                    <div class="valid-feedback">
+                      Verified
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="" required>
+                    <div class="valid-feedback">
+                      Verified
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Phone Number</label>
+                        <input type="text" class="form-control" id="validationCustom00" placeholder="+216 xx xxx xxx" value="" required>
+                        <div class="valid-feedback">
+                          Verified
+                        </div>
+                      </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationCustomUsername">E-mail</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      </div>
+                      <input type="email" id="validationCustomUsername" placeholder="Exemple@email.com" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Please use a valid E-mail.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">City</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom04">State</label>
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Zip</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip Code" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid zip. 
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+                  
+           
+        <center><legend> <h1>Passez Votre commande</h1></legend></center>
+        <div class="container" >
+        <table id="tab" >
+                <tr>
+                    <th>CHoix</th>
+                    <th>quantité</th>
+                    <th>Prix</th>
+                    <th>Total</th>
+                </tr>
+             
+                <tr>
+                    <td><label for="plat-select">Nos Plats:</label>
+                        <select id="plat-select">
+                                <option value="" disabled selected>--Please choose an option--</option>
+                                <option value="Porc" data-prix="45">Porc au caramel. </option>
+                                <option value="Nems" data-prix="24">Nems au poulet</option>
+                                <option value="Canard" data-prix="38">Canard laqué </option>
+                                <option value="Poulet" data-prix="32">Poulet aux champignons</option>
+                                <option value="Bouchées" data-prix="58">Bouchées vapeur</option>
+                                <option value="raviolis" data-prix="15">Soupe aux raviolis</option>
+                            </select></td>
+                    <td><div class="commande">
+                            <button class="plus" type="button" name="buttonqte+"   onclick="Addqte(event)">
+                                    <label width="10" height="10"> + </label>   
+                            </button>
+                          
+                            <label id="qauntite"> 0</label> 
+
+                            <button class="moin" type="button" name="buttonqte-" onclick="Deductqte(event)">
+                              <label width="10" height="10"> - </label>
+                            </button>
+                          </div></td>
+                          <td id="price"> dt</td>
+                          <td><label id="Total-price"></label> dt</td>
+                    
+
+                </tr>
+
+                <tr>
+                    <td><label for="sup-select">Supplements:</label>
+
+                        <select id="sup-select">
+                                <option value="">--Please choose an option--</option>
+                                <option value="dog" data-prix="2">frite </option>
+                                <option value="cat" data-prix="1">mayonnaise</option>
+                                <option value="hamster" data-prix="1">ketchup</option>
+                                <option value="parrot" data-prix="4">fromage</option>
+                                <option value="spider" data-prix="0.5">sucre</option>
+                                <option value="goldfish" data-prix="2.5">Olive</option>
+                            </select></td>
+                    <td><div class="commande1">
+                            <button class="plus" type="button" name="buttonsup+"   onclick="Addsup(event)">
+                                <label width="10" height="10"> + </label>   
+                            </button>
+                                  
+                            <label id="qauntite1"> 0</label> 
+        
+                            <button class="moin" type="button" name="buttonsup-" onclick="Deductsup(event)">
+                                <label width="10" height="10"> - </label>
+                            </button>
+                        </div></td>
+                        <td id="price1"> dt</td>
+                        <td><label id="Total-price1"></label> dt</td>
+                </tr>
+
+                <tr>
+                    <td><label for="boir-select">Boisson:</label>
+
+                        <select id="boir-select">
+                                <option value="">--Please choose an option--</option>
+                                <option value="dog" data-prix="1.5">eau mineral 0.5l</option>
+                                <option value="cat" data-prix="2.5">eau mineral 1l</option>
+                                <option value="hamster" data-prix="5">coca cola</option>
+                                <option value="parrot" data-prix="7">Pepsi</option>
+                                <option value="spider" data-prix="5">Fanta</option>
+                                <option value="goldfish" data-prix="5">Boga</option>
+                                <option value="goldfish" data-prix="5">Viva</option>
+                                <option value="goldfish" data-prix="7">Orangina</option>
+                            </select></td>
+                    <td><div class="commande2">
+                            <button class="plus" type="button" name="buttonboir+"   onclick="Addboir(event)">
+                                <label width="10" height="10"> + </label>   
+                            </button>
+                                          
+                            <label id="qauntite2"> 0</label> 
+                
+                            <button class="moin" type="button" name="buttonboir-" onclick="Deductboir(event)">
+                                <label width="10" height="10"> - </label>
+                            </button>
+                        </div></td>
+                        <td id="price2"> dt</td>
+                        <td><label id="Total-price2"></label> dt</td>
+                    </tr>    
+                </table> </div> 
+                <div id="btn-commonde">
+                        <button class="btn btn-primary" type="submit">Valider la Commande</button>
+                        <script>
+                                (function() {
+                  
+                                  'use strict';
+                                  window.addEventListener('load', function() {
+                                    var forms = document.getElementsByClassName('needs-validation');
+                                    var validation = Array.prototype.filter.call(forms, function(form) {
+                                      form.addEventListener('submit', function(event) {
+                                        if (form.checkValidity() === false) {
+                                          event.preventDefault();
+                                          event.stopPropagation();
+                                        }
+                                        Commande(event);
+                                        form.classList.add('was-validated');
+                                      }, false);
+                                    });
+                                  }, false);
+                                })();
+                                
+                                </script>          
+          
+             <div class="button">
+                    <button class="btn btn-secondary" type="reset">Annuler La commande</button>
+            </div>
+        </div>
+    
+             
+             <center><legend><h1>Votre commande est :</h1></legend></center>
+
+             <div class="container" >
+                    <center><h3> Au Nom de Mme/Mr : </h3><h3 id="validatedname"></h3></center>
+                    <center><h4> N° de telephone : </h4><h4 id="validatedphone"></h4></center>
+             <table id="tab1">
+                     <tr>
+                         <th>Livraison Vers _____:   </th>
+                         <th>Temps Estimé de Livraison____ :   </th>
+                         <th>Totale a Payé _____:     </th>                 
+                    </tr>
+                    <tr>
+                       <td><label id="liv"></label> </td>
+                       <td> 30 min </td>
+                       <td id="Total-commande"> 0.000 dT</td>
+                    </tr>
+                    </table></div>
+                </form>
+        
+
+
+
+
+             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+             crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+             crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+             crossorigin="anonymous"></script>
+             <script type="text/javascript" src="index.js"></script>
+       
+
+</body>
+
+ 

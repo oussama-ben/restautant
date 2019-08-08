@@ -1,0 +1,50 @@
+.Coordonnées{
+    display: flex;
+    justify-content: space-around;
+}
+.Adresse{
+    display: flex;
+    justify-content: space-around;
+}
+#tab{
+    border-collapse: separate ;
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+#tab1{
+    border-collapse: collapse;
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px
+}
+td, th {
+    border: 1px solid black;
+}
+#btn-commonde{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+
+.form-row{
+display: flex;
+justify-content: space-around;
+margin-top: 50px;
+margin-bottom: 50px
+
+}
+.container{
+    background-color: azure;
+}
+body{
+    background-color: grey 
+}
+legend{
+    color: azure
+}
